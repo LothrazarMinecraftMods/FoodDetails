@@ -3,7 +3,6 @@ package com.lothrazar.samsfooddetails;
 import net.minecraft.item.ItemFood;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
-import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -20,8 +19,7 @@ public class ModFoodDetails
     
     @EventHandler
 	public void onPreInit(FMLPreInitializationEvent event)
-	{ 
-    	FMLCommonHandler.instance().bus().register(instance); 
+	{  
 		MinecraftForge.EVENT_BUS.register(instance); 
 	}
     @EventHandler
