@@ -10,7 +10,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
-@Mod(modid = ModFoodDetails.MODID, useMetadata=true)
+@Mod(modid = ModFoodDetails.MODID, useMetadata=true, updateJSON = "https://raw.githubusercontent.com/LothrazarMinecraftMods/FoodDetails/master/update.json")
 public class ModFoodDetails
 {
     public static final String MODID = "samsfooddetails";
