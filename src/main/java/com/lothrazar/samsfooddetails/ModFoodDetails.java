@@ -1,6 +1,7 @@
 package com.lothrazar.samsfooddetails;
 
 import net.minecraft.item.ItemFood;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -26,14 +27,14 @@ public class ModFoodDetails{
 	public void onItemTooltipEvent(ItemTooltipEvent event){
 
 		// https://www.reddit.com/r/minecraftsuggestions/comments/3brh7v/when_hovering_over_a_food_it_shows_how_many_food/
+		ItemStack itemStack = event.getItemStack();
+		if(itemStack != null && itemStack.getItem() instanceof ItemFood){
+			ItemFood food = (ItemFood) itemStack.getItem();
 
-		if(event.itemStack != null && event.itemStack.getItem() instanceof ItemFood){
-			ItemFood food = (ItemFood) event.itemStack.getItem();
+			int hunger = food.getHealAmount(itemStack);
+			float satur = food.getSaturationModifier(itemStack);
 
-			int hunger = food.getHealAmount(event.itemStack);
-			float satur = food.getSaturationModifier(event.itemStack);
-
-			event.toolTip.add(hunger + " (" + satur + ")");
+			event.getToolTip().add(hunger + " (" + satur + ")");
 		}
 	}
 }
