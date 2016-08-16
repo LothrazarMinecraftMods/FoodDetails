@@ -5,7 +5,7 @@
     "name": "Food Details",
     "description": "Shows food hunger and saturation.",
     "version": "1.0.1",
-    "mcversion": "1.9",
+    "mcversion": "1.9.4",
     "url": "http://www.curse.com/mc-mods/minecraft/232516-food-details",
     "updateUrl": "",
     "authorList": [ "Lothrazar" ],
