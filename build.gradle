@@ -20,12 +20,12 @@ plugins {
     id "net.minecraftforge.gradle.forge" version "2.0.2"
 }
 */
-version = "1.9.4-1.0.1"
+version = "1.10.2-1.0.1"
 group= "com.lothrazar.samsfooddetails"
 archivesBaseName = "FoodDetails"
 
 minecraft {
-    version = "1.9.4-12.17.0.1976"
+    version = "1.10.2-12.18.1.2061"
     runDir = "run"
     
     // the mappings can be changed at any time, and must be in the following format.
